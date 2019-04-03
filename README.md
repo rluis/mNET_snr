@@ -4,4 +4,4 @@ Python script that, given an aligned bam file and sample name, returns a bam fil
 
 Described as part of an analysis pipeline in *insert reference*
 
-For usage, see get_SNR_bam.py -h
+For usage, see get_SNR_bam_merged_reads.py -h
