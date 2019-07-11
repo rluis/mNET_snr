@@ -10,6 +10,8 @@ For usage, see get_SNR_bam_merged_reads.py -h
 # mNET_snr_ignoreSoftClip
 
 Python script just as [mNET_snr](https://github.com/tomasgomes/mNET_snr) modified to ignore reads with soft clipping.
+Described as part of an analysis pipeline in *insert reference*
+For usage, see get_SNR_bam_ignoreSoftClip.py -h
 
 **Parameters**:
 
@@ -49,10 +51,3 @@ The Phred-scale base QUALity+33 must be the one where the 1-based position that 
   strand information: Reversed.
   
 #### Convert the new single nucleotide resolution .sam file into a .bam file. Sort and index the output.
- 
- 
-
-
-Described as part of an analysis pipeline in *insert reference*
-
-For usage, see get_SNR_bam_ignoreSoftClip.py -h
