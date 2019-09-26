@@ -20,7 +20,7 @@ For usage, see get_SNR_bam_ignoreSoftClip.py -h
 
 #### For each read in the .sam file only consider read 2 from the pair (147/163 SAM flag field) and disregard any read that contains deletions, insertions or soft clipping information in the CIGAR string.
 
-#### Modification of fields 2, 4, 6, 9, 10, 11 and strand information in order to represent the sequenced 3'OH.
+#### Modification of SAM fields 2, 4, 6, 9, 10, 11 and strand information in order to represent the sequenced 3'OH.
 
 ##### 2
 Since the original flag will be either 147 or 163 (second read in pair) this will be changed to 99 or 83 respectively. Thus, obtaining a SAM flag that points to a first read in pair with read 1 directionality.
