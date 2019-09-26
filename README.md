@@ -1,4 +1,4 @@
-# mNET_snr_ignoreSoftClip
+# get_SNR_bam_ignoreSoftClip
 
 Python script just as [mNET_snr](https://github.com/tomasgomes/mNET_snr) modified to ignore reads with soft clipping.
 Described as part of an analysis pipeline in *insert reference*
