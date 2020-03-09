@@ -160,7 +160,7 @@ for bam, name in zip(files, filenames):
                         line[5]="1M"
 
                     else:
-                        print line
+                        print(line)
 
                     result.write("\t".join(line)+"\n")
                     
@@ -184,7 +184,7 @@ for bam, name in zip(files, filenames):
     
     removeTemp(bamid)
 
-    print name+" done!"
+    print(name+" done!")
     print("--- %s seconds ---" % round(time.time() - start_time, 2))
 
-print "Finished!"
+print("Finished!")
