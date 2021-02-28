@@ -179,8 +179,8 @@ for bam, name in zip(files, filenames):
     infile.close()
     outfile.close()
 
-    sorted_file=pysam.sort('-o',  outdir+name+"_sorted.bam", name+"_snr_temp"+bamid+".bam")
-    sorted_file=pysam.index(outdir+name+"_sorted.bam")
+    sorted_file=pysam.sort('-o',  "{}/{}_sorted.bam".format(outdir,name), name+"_snr_temp"+bamid+".bam")
+    sorted_file=pysam.index("{}/{}_sorted.bam".format(outdir,name))
     
     removeTemp(bamid)
 
