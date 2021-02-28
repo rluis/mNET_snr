@@ -44,48 +44,5 @@ The Phred-scale base quality+33 must be the one where the 1-based position that 
 Reversed.
   
 #### Convert the new single nucleotide resolution .sam file into a .bam file. Sort and index the output.
-
-
------------------------------------------------------------------------------------------------------------------
-
-
-# get_SNR_bam_merged_reads
-
-Python script just as [mNET_snr](https://github.com/tomasgomes/mNET_snr) modified to be used on merged reads and to ignore reads with soft clipping.
-Described as part of an analysis pipeline in *insert reference*
-For usage, see get_SNR_bam_merged_reads.py -h
-
-**Parameters**:
-
--f, One or more file paths, separated by spaces
-
--s, New file prefixes (no extension), separated by spaces. In the same number as the file paths.
-
--d, Output directory. Defaults to './'
-
-
-
-### It operates in the following manner:
-
-#### The input alignment file (.bam) provided together with the -f argument will be converted to .sam to ease subsequent parsing.
-
-#### For each read in the .sam file only consider read 2 from the pair (147/163 SAM flag field) and disregard any read that contains deletions, insertions or soft clipping information in the CIGAR string.
-
-#### Modification of fields 4, 6, 9, 10 and 11 in order to represent the sequenced 3'OH.
-
-
-##### 4
-The 1-based position corresponds to the last nucleotide of the plus stranded reads so we correct it. Minus stranded reads (16 flag) remain unchanged.
-
-##### 6
-The CIGAR string will be turned into "1M".
-
-##### 10
-The nucleotide represented must be the one where the 1-based position that the 4th SAM field points to. For minus strand (flag 16) reads we extract the first nucleotide and for plus stranded reads the last.
-
-##### 11
-The Phred-scale base quality+33 must be the one where the 1-based position that the 4th SAM field points to. For minus strand (flag 16) reads we extract the first quality value and for plus stranded reads the last.
-
-  
 #### Convert the new single nucleotide resolution .sam file into a .bam file. Sort and index the output.
 
