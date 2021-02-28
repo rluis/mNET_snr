@@ -138,7 +138,7 @@ for bam, name in zip(files, filenames):
                 if line[1] in flags and line[6]=="=" and \
                     (not "I" in line[5] and not "D" in line[5] and not "S" in line[5]): ## added filtering for Soft Clipped reads
 
-                    line[8]=str(int(line[8])/abs(int(line[8])))
+                    line[8]=str(int(int(line[8])/abs(int(line[8]))))
                     #field 8 can be negative
 
                     if line[1]==flags[0]:
