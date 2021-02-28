@@ -1,5 +1,7 @@
 # get_SNR_bam_ignoreSoftClip
 
+## Minor changes. Ready to work with samtools v1.10 or later
+
 Python script just as [mNET_snr](https://github.com/tomasgomes/mNET_snr) modified to ignore reads with soft clipping.
 Described as part of an analysis pipeline in *insert reference*
 For usage, see get_SNR_bam_ignoreSoftClip.py -h
