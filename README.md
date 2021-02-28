@@ -44,5 +44,4 @@ The Phred-scale base quality+33 must be the one where the 1-based position that 
 Reversed.
   
 #### Convert the new single nucleotide resolution .sam file into a .bam file. Sort and index the output.
-#### Convert the new single nucleotide resolution .sam file into a .bam file. Sort and index the output.
 
